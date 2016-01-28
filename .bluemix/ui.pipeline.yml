@@ -37,7 +37,7 @@ stages:
       #!/bin/bash
       # Push app
       export CF_APP_NAME="$CF_APP-dev"
-      cf push "${CF_APP_NAME}"
+      cf push "${CF_APP_NAME}" -n "${CF_APP_NAME}"
       # View logs
       #cf logs "${CF_APP_NAME}" --recent
 - name: QA
@@ -66,7 +66,7 @@ stages:
       #!/bin/bash
       # Push app
       export CF_APP_NAME="$CF_APP-qa"
-      cf push "${CF_APP_NAME}"
+      cf push "${CF_APP_NAME}" -n "${CF_APP_NAME}"
       # View logs
       #cf logs "${CF_APP_NAME}" --recent
 - name: PROD
@@ -95,6 +95,6 @@ stages:
       #!/bin/bash
       # Push app
       export CF_APP_NAME="$CF_APP"
-      cf push "${CF_APP_NAME}"
+      cf push "${CF_APP_NAME}" -n "${CF_APP_NAME}"
       # View logs
       #cf logs "${CF_APP_NAME}" --recent
