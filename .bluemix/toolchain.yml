@@ -10,21 +10,21 @@ required:
 
 # Github repos
 catalog-api-repo:
-  capability: github
+  capability: githubpublic
   parameters:
     repo_name: catalog-api
     fork: skaegi/Microservices_CatalogAPI
     has_issues: false
 
 orders-api-repo:
-  capability: github
+  capability: githubpublic
   parameters:
     repo_name: order-api
     fork: skaegi/Microservices_OrdersAPI
     has_issues: false
 
 ui-repo:
-  capability: github
+  capability: githubpublic
   parameters:
     repo_name: ui
     fork: skaegi/Microservices_UI
