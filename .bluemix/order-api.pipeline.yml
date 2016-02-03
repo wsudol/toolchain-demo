@@ -42,8 +42,8 @@ stages:
       cf cups ordersAPI
       fi
       # Push app
-      export CF_APP_NAME="$CF_APP-dev"
-      cf push "${CF_APP_NAME}" -n "${CF_APP_NAME}"
+      export CF_APP_NAME="dev-$CF_APP"
+      cf push "${CF_APP_NAME}"
       # Update ordersAPI
       HOST=http://$(cf app $CF_APP_NAME | grep urls: | awk '{print $2}')
       cf uups ordersAPI -p '{"host":"'$HOST'"}'
@@ -80,8 +80,8 @@ stages:
       cf cups ordersAPI
       fi
       # Push app
-      export CF_APP_NAME="$CF_APP-qa"
-      cf push "${CF_APP_NAME}" -n "${CF_APP_NAME}"
+      export CF_APP_NAME="test-$CF_APP"
+      cf push "${CF_APP_NAME}"
       # Update ordersAPI
       HOST=http://$(cf app $CF_APP_NAME | grep urls: | awk '{print $2}')
       cf uups ordersAPI -p '{"host":"'$HOST'"}'
@@ -119,7 +119,7 @@ stages:
       fi
       # Push app
       export CF_APP_NAME="$CF_APP"
-      cf push "${CF_APP_NAME}" -n "${CF_APP_NAME}"
+      cf push "${CF_APP_NAME}"
       # Update ordersAPI
       HOST=http://$(cf app $CF_APP_NAME | grep urls: | awk '{print $2}')
       cf uups ordersAPI -p '{"host":"'$HOST'"}'
