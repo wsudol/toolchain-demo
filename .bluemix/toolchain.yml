@@ -10,7 +10,7 @@ required:
 
 # Github repos
 catalog-api-repo:
-  capability: githubpublic
+  service_id: githubpublic
   parameters:
     repo_name: catalog-api
     fork: true
@@ -18,7 +18,7 @@ catalog-api-repo:
     has_issues: false
 
 orders-api-repo:
-  capability: githubpublic
+  service_id: githubpublic
   parameters:
     repo_name: order-api
     fork: true
@@ -26,7 +26,7 @@ orders-api-repo:
     has_issues: false
 
 ui-repo:
-  capability: githubpublic
+  service_id: githubpublic
   parameters:
     repo_name: ui
     fork: true
@@ -35,7 +35,7 @@ ui-repo:
 
 # Pipelines
 ui-build:
-  capability: pipeline
+  service_id: pipeline
   parameters:
     name: ui
     metadata: ui.pipeline.yml
@@ -55,7 +55,7 @@ ui-build:
       PROD_REGION_ID: ${deploy.parameters.prod-region}
 
 catalog-api-build:
-  capability: pipeline
+  service_id: pipeline
   parameters:
     name: catalog-api
     metadata: catalog-api.pipeline.yml
@@ -73,7 +73,7 @@ catalog-api-build:
       PROD_REGION_ID: ${deploy.parameters.prod-region}
 
 orders-api-build:
-  capability: pipeline
+  service_id: pipeline
   parameters:
     name: orders-api
     metadata: order-api.pipeline.yml
@@ -92,35 +92,35 @@ orders-api-build:
 
 #Timeline Analytics
 events:
-  capability: timeline
+  service_id: timeline
 
 #Slack
 messaging:
-  capability: slack
+  service_id: slack
   metadata: slack.yml
 
 #Sauce Laps
 test:
-  capability: saucelabs
+  service_id: saucelabs
   metadata: saucelabs.yml
 
 #Pager Duty
 alerting:
-  capability: pagerduty
+  service_id: pagerduty
   metadata: pagerduty.yml
   
 #Web IDE
 webide:
-  capability: orion
+  service_id: orion
 
 #Active Deploy
 greenblue:
-  capability: activedeploy
+  service_id: activedeploy
   
 #Deployment
 deploy:
   schema: deploy.json
-  capability-category: pipeline
+  service-category: pipeline
   parameters:
     dev-space: dev
     qa-space: qa
