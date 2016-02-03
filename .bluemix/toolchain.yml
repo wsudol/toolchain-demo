@@ -13,21 +13,24 @@ catalog-api-repo:
   capability: githubpublic
   parameters:
     repo_name: catalog-api
-    fork: skaegi/Microservices_CatalogAPI
+    fork: true
+    repo_url: https://github.com/skaegi/skaegi/Microservices_CatalogAPI.git
     has_issues: false
 
 orders-api-repo:
   capability: githubpublic
   parameters:
     repo_name: order-api
-    fork: skaegi/Microservices_OrdersAPI
+    fork: true
+    repo_url: https://github.com/skaegi/skaegi/Microservices_OrdersAPI.git
     has_issues: false
 
 ui-repo:
   capability: githubpublic
   parameters:
     repo_name: ui
-    fork: skaegi/Microservices_UI
+    fork: true
+    repo_url: https://github.com/skaegi/Microservices_UI.git
     has_issues: true
 
 # Pipelines
