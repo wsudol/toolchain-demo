@@ -10,23 +10,23 @@ required:
 
 # Github repos
 catalog-api-repo:
-  service_id: github
+  service_id: githubpublic
   parameters:
-    repo_name: catalog-api
+    repo_name: "{{name}}-catalog-api"
     fork: skaegi/Microservices_CatalogAPI
     has_issues: false
 
 orders-api-repo:
-  service_id: github
+  service_id: githubpublic
   parameters:
-    repo_name: order-api
+    repo_name: "{{name}}-order-api"
     fork: skaegi/Microservices_OrdersAPI
     has_issues: false
 
 ui-repo:
-  service_id: github
+  service_id: githubpublic
   parameters:
-    repo_name: ui
+    repo_name: "{{name}}-ui"
     fork: skaegi/Microservices_UI
     has_issues: true
 
@@ -122,3 +122,6 @@ deploy:
     dev-space: dev
     qa-space: qa
     prod-space: prod
+    orders-app-name: "{{orders-api-repo.parameters.repo_name}}"
+    catalog-app-name: "{{catalog-api-repo.parameters.repo_name}}"
+    ui-app-name: "{{ui-repo.parameters.repo_name}}"
