@@ -15,7 +15,6 @@ catalog-api-repo:
     repo_name: "catalog-api-{{name}}"
     type: clone
     repo_url: https://github.com/skaegi/Microservices_CatalogAPI.git
-    has_issues: false
 
 orders-api-repo:
   service_id: githubpublic
@@ -23,7 +22,6 @@ orders-api-repo:
     repo_name: "order-api-{{name}}"
     type: clone
     repo_url: https://github.com/skaegi/Microservices_OrdersAPI.git
-    has_issues: false
 
 ui-repo:
   service_id: githubpublic
@@ -31,7 +29,6 @@ ui-repo:
     repo_name: "ui-{{name}}"
     type: clone
     repo_url: https://github.com/skaegi/Microservices_UI.git
-    has_issues: true
 
 # Pipelines
 ui-build:
