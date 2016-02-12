@@ -41,6 +41,18 @@
             "description": "The bluemix space",
             "type": "string"
         },
+        "bog-region": {
+            "description": "The bluemix region",
+            "type": "string"
+        },
+        "bog-organization": {
+            "description": "The bluemix org",
+            "type": "string"
+        },
+       "bog-space": {
+            "description": "The bluemix space",
+            "type": "string"
+        },
         "orders-app-name": {
             "description": "orders app name",
             "type": "string"
@@ -148,6 +160,23 @@
                 {
                   "type": "select",
                   "key": "prod-space",
+                  "readonly": false
+                },
+                 {
+                  "type": "label",
+                  "title": "Bog Stage"
+                },
+                {
+                  "type": "select",
+                  "key": "bog-region"
+                },
+                {
+                  "type": "select",
+                  "key": "bog-organization"
+                },
+                {
+                  "type": "select",
+                  "key": "bog-space",
                   "readonly": false
                 }
             ]

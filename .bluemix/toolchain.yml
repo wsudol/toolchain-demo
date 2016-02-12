@@ -136,12 +136,15 @@ deploy:
     dev-region: "{{region}}"
     qa-region: "{{region}}"
     prod-region: "{{region}}"
+    bog-region: "{{region}}"
     dev-organization: "{{organization}}"
     qa-organization: "{{organization}}"
     prod-organization: "{{organization}}"
+    bog-organization: "{{organization}}"
     dev-space: dev
     qa-space: qa
     prod-space: prod
+    bog-space: theBog
     orders-app-name: "{{orders-api-repo.parameters.repo_name}}"
     catalog-app-name: "{{catalog-api-repo.parameters.repo_name}}"
     ui-app-name: "{{ui-repo.parameters.repo_name}}"
