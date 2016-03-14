@@ -43,10 +43,8 @@ ui-build:
     name: "ui-{{name}}"
     ui-pipeline: true
     metadata: ui.pipeline.yml
+    tools: ["ui-repo", "test"]
     env:
-      GIT_REPO_URL: ${ui-repo.parameters.repo-url}
-      SAUCE_USER: "{{test.parameters.username}}"
-      API_KEY: "{{test.parameters.key}}"
       CF_APP_NAME: "{{deploy.parameters.ui-app-name}}"
       DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
       DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
@@ -64,10 +62,8 @@ catalog-api-build:
   parameters:
     name: "catalog-api-{{name}}"
     metadata: catalog-api.pipeline.yml
+    tools: ["catalog-api-repo", "test"]
     env:
-      GIT_REPO_URL: ${catalog-api-repo.parameters.repo-url}
-      SAUCE_USER: "{{test.parameters.username}}"
-      API_KEY: "{{test.parameters.key}}"
       CF_APP_NAME: "{{deploy.parameters.catalog-app-name}}"
       DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
       DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
@@ -85,10 +81,8 @@ orders-api-build:
   parameters:
     name: "orders-api-{{name}}"
     metadata: order-api.pipeline.yml
+    tools: ["orders-api-repo", "test"]
     env:
-      GIT_REPO_URL: ${orders-api-repo.parameters.repo-url}
-      SAUCE_USER: "{{test.parameters.username}}"
-      API_KEY: "{{test.parameters.key}}"
       CF_APP_NAME: "{{deploy.parameters.orders-app-name}}"
       DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
       DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
