@@ -45,6 +45,7 @@ ui-build:
     metadata: ui.pipeline.yml
     tools: ["ui-repo", "test"]
     env:
+      UI_REPO: "ui-repo"
       CF_APP_NAME: "{{deploy.parameters.ui-app-name}}"
       DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
       DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
@@ -64,6 +65,7 @@ catalog-api-build:
     metadata: catalog-api.pipeline.yml
     tools: ["catalog-api-repo", "test"]
     env:
+      CATALOG_API_REPO: "catalog-api-repo"
       CF_APP_NAME: "{{deploy.parameters.catalog-app-name}}"
       DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
       DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
@@ -83,6 +85,7 @@ orders-api-build:
     metadata: order-api.pipeline.yml
     tools: ["orders-api-repo", "test"]
     env:
+      ORDER_API_REPO: "orders-api-repo"
       CF_APP_NAME: "{{deploy.parameters.orders-app-name}}"
       DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
       DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
