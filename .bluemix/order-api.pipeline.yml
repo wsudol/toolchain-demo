@@ -4,6 +4,7 @@ stages:
   inputs:
   - type: git
     branch: master
+  tool: ${ORDER_API_REPO}
   triggers:
   - type: commit
   jobs:
