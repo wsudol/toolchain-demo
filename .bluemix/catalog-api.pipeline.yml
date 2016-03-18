@@ -4,7 +4,7 @@ stages:
   inputs:
   - type: git
     branch: master
-  tool: ${CATALOG_API_REPO}
+    tool: ${CATALOG_API_REPO}
   triggers:
   - type: commit
   jobs:
