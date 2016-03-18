@@ -42,60 +42,63 @@ ui-build:
   parameters:
     name: "ui-{{name}}"
     ui-pipeline: true
-    metadata: ui.pipeline.yml
+    configuration:
+      content: {file: ui.pipeline.yml}
+      env:
+        UI_REPO: "ui-repo"
+        CF_APP_NAME: "{{deploy.parameters.ui-app-name}}"
+        DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
+        DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
+        DEV_REGION_ID: "{{deploy.parameters.dev-region}}"
+        QA_SPACE_NAME: "{{deploy.parameters.qa-space}}"
+        QA_ORG_NAME: "{{deploy.parameters.qa-organization}}"
+        QA_REGION_ID: "{{deploy.parameters.qa-region}}"
+        PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
+        PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
+        PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
     tools: ["ui-repo", "test"]
-    env:
-      UI_REPO: "ui-repo"
-      CF_APP_NAME: "{{deploy.parameters.ui-app-name}}"
-      DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
-      DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
-      DEV_REGION_ID: "{{deploy.parameters.dev-region}}"
-      QA_SPACE_NAME: "{{deploy.parameters.qa-space}}"
-      QA_ORG_NAME: "{{deploy.parameters.qa-organization}}"
-      QA_REGION_ID: "{{deploy.parameters.qa-region}}"
-      PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
-      PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
-      PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
   hidden: [form, description]  
 
 catalog-api-build:
   service_id: pipeline
   parameters:
     name: "catalog-api-{{name}}"
-    metadata: catalog-api.pipeline.yml
+    configuration:
+      metadata: catalog-api.pipeline.yml
+      env:
+        CATALOG_API_REPO: "catalog-api-repo"
+        CF_APP_NAME: "{{deploy.parameters.catalog-app-name}}"
+        DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
+        DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
+        DEV_REGION_ID: "{{deploy.parameters.dev-region}}"
+        QA_SPACE_NAME: "{{deploy.parameters.qa-space}}"
+        QA_ORG_NAME: "{{deploy.parameters.qa-organization}}"
+        QA_REGION_ID: "{{deploy.parameters.qa-region}}"
+        PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
+        PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
+        PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
     tools: ["catalog-api-repo", "test"]
-    env:
-      CATALOG_API_REPO: "catalog-api-repo"
-      CF_APP_NAME: "{{deploy.parameters.catalog-app-name}}"
-      DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
-      DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
-      DEV_REGION_ID: "{{deploy.parameters.dev-region}}"
-      QA_SPACE_NAME: "{{deploy.parameters.qa-space}}"
-      QA_ORG_NAME: "{{deploy.parameters.qa-organization}}"
-      QA_REGION_ID: "{{deploy.parameters.qa-region}}"
-      PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
-      PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
-      PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
   hidden: [form, description]
 
 orders-api-build:
   service_id: pipeline
   parameters:
     name: "orders-api-{{name}}"
-    metadata: order-api.pipeline.yml
+    configuration:
+      metadata: order-api.pipeline.yml
+      env:
+        ORDER_API_REPO: "orders-api-repo"
+        CF_APP_NAME: "{{deploy.parameters.orders-app-name}}"
+        DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
+        DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
+        DEV_REGION_ID: "{{deploy.parameters.dev-region}}"
+        QA_SPACE_NAME: "{{deploy.parameters.qa-space}}"
+        QA_ORG_NAME: "{{deploy.parameters.qa-organization}}"
+        QA_REGION_ID: "{{deploy.parameters.qa-region}}"
+        PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
+        PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
+        PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
     tools: ["orders-api-repo", "test"]
-    env:
-      ORDER_API_REPO: "orders-api-repo"
-      CF_APP_NAME: "{{deploy.parameters.orders-app-name}}"
-      DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
-      DEV_ORG_NAME: "{{deploy.parameters.dev-organization}}"
-      DEV_REGION_ID: "{{deploy.parameters.dev-region}}"
-      QA_SPACE_NAME: "{{deploy.parameters.qa-space}}"
-      QA_ORG_NAME: "{{deploy.parameters.qa-organization}}"
-      QA_REGION_ID: "{{deploy.parameters.qa-region}}"
-      PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
-      PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
-      PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
   hidden: [form, description]
 
 #Timeline Analytics
