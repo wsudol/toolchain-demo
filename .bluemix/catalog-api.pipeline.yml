@@ -98,6 +98,8 @@ stages:
   - name: Pre Deploy Check
     type: tester
     extension_id: ibm.devops.services.pipeline.dra_predeploygate_extn
+    tools:
+      - ${SAUCE_LABS}
     ENABLE_COMPARE_APPS: 'true'
     DRA_MODE: 'false'
     APP_DESTINATION_MANIFEST: manifest.yml

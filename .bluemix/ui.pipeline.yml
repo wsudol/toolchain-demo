@@ -71,6 +71,8 @@ stages:
   - name: Sauce Labs Tests
     type: tester
     extension_id: ibm.devops.services.pipeline.saucelabs
+    tools:
+      - ${SAUCE_LABS}
     target:
       region_id: ${QA_REGION_ID}
       organization: ${QA_ORG_NAME}
