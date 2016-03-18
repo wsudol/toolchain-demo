@@ -45,6 +45,7 @@ ui-build:
     configuration:
       content: {file: ui.pipeline.yml}
       env:
+        SAUCE_LABS: "test"
         UI_REPO: "ui-repo"
         CF_APP_NAME: "{{deploy.parameters.ui-app-name}}"
         DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
@@ -66,6 +67,7 @@ catalog-api-build:
     configuration:
       metadata: catalog-api.pipeline.yml
       env:
+        SAUCE_LABS: "test"
         CATALOG_API_REPO: "catalog-api-repo"
         CF_APP_NAME: "{{deploy.parameters.catalog-app-name}}"
         DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
@@ -87,6 +89,7 @@ orders-api-build:
     configuration:
       metadata: order-api.pipeline.yml
       env:
+        SAUCE_LABS: "test"
         ORDER_API_REPO: "orders-api-repo"
         CF_APP_NAME: "{{deploy.parameters.orders-app-name}}"
         DEV_SPACE_NAME: "{{deploy.parameters.dev-space}}"
