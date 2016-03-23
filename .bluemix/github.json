@@ -28,7 +28,7 @@
     "form": [
       {
         "type": "validator",
-        "url": "https://local.devops.stage1.ng.bluemix.net:3800/devops/setup/bm-helper/custom_github_helper.html"
+        "url": "https://localhost:3800/devops/setup/bm-helper/custom_github_helper.html"
       },
       {
         "type": "table",
