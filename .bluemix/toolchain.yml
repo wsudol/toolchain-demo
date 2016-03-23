@@ -57,7 +57,7 @@ ui-build:
         PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
         PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
         PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
-    tools: ["ui-repo", "test"]
+    services: ["ui-repo", "test"]
   hidden: [form, description]  
 
 catalog-api-build:
@@ -79,7 +79,7 @@ catalog-api-build:
         PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
         PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
         PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
-    tools: ["catalog-api-repo", "test"]
+    services: ["catalog-api-repo", "test"]
   hidden: [form, description]
 
 orders-api-build:
@@ -101,7 +101,7 @@ orders-api-build:
         PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
         PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
         PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
-    tools: ["orders-api-repo", "test"]
+    services: ["orders-api-repo", "test"]
   hidden: [form, description]
 
 #Timeline Analytics
