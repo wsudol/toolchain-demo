@@ -4,7 +4,7 @@ stages:
   inputs:
   - type: git
     branch: master
-    tool: ${CATALOG_API_REPO}
+    service: ${CATALOG_API_REPO}
   triggers:
   - type: commit
   jobs:
@@ -98,7 +98,7 @@ stages:
   - name: Pre Deploy Check
     type: tester
     extension_id: ibm.devops.services.pipeline.dra_predeploygate_extn
-    tools:
+    services:
       - ${SAUCE_LABS}
     ENABLE_COMPARE_APPS: 'true'
     DRA_MODE: 'false'
