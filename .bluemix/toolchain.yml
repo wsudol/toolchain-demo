@@ -117,17 +117,17 @@ events:
 #Slack
 messaging:
   service_id: slack
-  metadata: slack.yml
+  include: slack.yml
 
 #Sauce Laps
 test:
   service_id: saucelabs
-  metadata: saucelabs.yml
+  include: saucelabs.yml
 
 #Pager Duty
 alerting:
   service_id: pagerduty
-  metadata: pagerduty.yml
+  include: pagerduty.yml
   
 #Web IDE
 webide:
