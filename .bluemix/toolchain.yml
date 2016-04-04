@@ -66,7 +66,7 @@ catalog-api-build:
   parameters:
     name: "catalog-api-{{name}}"
     configuration:
-    content: 
+      content: 
         <<: catalog-api.pipeline.yml
       env:
         SAUCE_LABS: "test"
