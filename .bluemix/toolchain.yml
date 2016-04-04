@@ -82,6 +82,7 @@ catalog-api-build:
         PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
         PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
         PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
+      execute: true
     services: ["catalog-api-repo", "test"]
   hidden: [form, description]
 
@@ -105,6 +106,7 @@ orders-api-build:
         PROD_SPACE_NAME: "{{deploy.parameters.prod-space}}"
         PROD_ORG_NAME: "{{deploy.parameters.prod-organization}}"
         PROD_REGION_ID: "{{deploy.parameters.prod-region}}"
+      execute: true
     services: ["orders-api-repo", "test"]
   hidden: [form, description]
 
