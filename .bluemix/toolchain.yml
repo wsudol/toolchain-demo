@@ -44,7 +44,7 @@ ui-build:
     ui-pipeline: true
     configuration:
       content: 
-        <<: ui.pipeline.yml
+        <: ui.pipeline.yml
       env:
         SAUCE_LABS: "test"
         UI_REPO: "ui-repo"
@@ -67,7 +67,7 @@ catalog-api-build:
     name: "catalog-api-{{name}}"
     configuration:
       content: 
-        <<: catalog-api.pipeline.yml
+        <: catalog-api.pipeline.yml
       env:
         SAUCE_LABS: "test"
         CATALOG_API_REPO: "catalog-api-repo"
@@ -90,7 +90,7 @@ orders-api-build:
     name: "orders-api-{{name}}"
     configuration:
       content: 
-        <<: order-api.pipeline.yml
+        <: order-api.pipeline.yml
       env:
         SAUCE_LABS: "test"
         ORDER_API_REPO: "orders-api-repo"
