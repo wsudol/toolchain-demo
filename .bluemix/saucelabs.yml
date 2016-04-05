@@ -1,4 +1,4 @@
 ---
 parameters:
-  username: ""
-  key: ""
+  username: "Ipsum"
+  key: "Lorem"
