@@ -132,7 +132,7 @@ webide:
 
 #Active Deploy
 greenblue:
-  service_id: activedeploy
+  service_id: bum
   
 #Deployment
 deploy:
