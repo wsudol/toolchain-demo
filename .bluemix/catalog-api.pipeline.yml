@@ -98,8 +98,6 @@ stages:
   - name: Pre Deploy Check
     type: tester
     extension_id: ibm.devops.services.pipeline.dra_predeploygate_extn
-    services:
-      - ${SAUCE_LABS}
     ENABLE_COMPARE_APPS: 'true'
     DRA_MODE: 'false'
     APP_DESTINATION_MANIFEST: manifest.yml
@@ -124,6 +122,8 @@ stages:
   - name: Sauce Labs Tests
     type: tester
     extension_id: ibm.devops.services.pipeline.saucelabs
+    services:
+      - ${SAUCE_LABS}
     target:
       region_id: ${QA_REGION_ID}
       organization: ${QA_ORG_NAME}
